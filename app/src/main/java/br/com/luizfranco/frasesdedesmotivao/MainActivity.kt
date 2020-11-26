@@ -24,15 +24,17 @@ class MainActivity : AppCompatActivity() {
             "Se não está ruim o bastante, é porque ainda não chegou ao final.",
             "Sorria! Tem alguém roubando seus dados =)",
             "Sem saber que era impossível, foi lá e soube.",
-            "Daqui pra frente é só pra trás."
+            "Daqui pra frente é só pra trás.",
+            "Chegar no fundo do poço é sempre uma nova oportunidade para descobrir que ele é ainda mais fundo do que parece.",
+            "Acredita em meritocracia? Melhor dar uma olhada no Instagram do filho do seu chefe =)"
         )
 
         val fraseAleatoria = listaDeFrases.random()
-        frase.text = fraseAleatoria
+        txtMainFrase.text = fraseAleatoria
 
         btnMainFrase.setOnClickListener{
             val fraseAleatoria = listaDeFrases.random()
-            frase.text = fraseAleatoria
+            txtMainFrase.text = fraseAleatoria
         }
     }
 }
