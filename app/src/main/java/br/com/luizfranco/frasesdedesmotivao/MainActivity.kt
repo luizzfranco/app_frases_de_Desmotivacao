@@ -2,6 +2,7 @@ package br.com.luizfranco.frasesdedesmotivao
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatDelegate
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.random.Random
 
@@ -26,7 +27,14 @@ class MainActivity : AppCompatActivity() {
             "Sem saber que era impossível, foi lá e soube.",
             "Daqui pra frente é só pra trás.",
             "Chegar no fundo do poço é sempre uma nova oportunidade para descobrir que ele é ainda mais fundo do que parece.",
-            "Acredita em meritocracia? Melhor dar uma olhada no Instagram do filho do seu chefe =)"
+            "Acredita em meritocracia? Melhor dar uma olhada no Instagram do filho do seu chefe =)",
+            "Nunca desista! O resultado sempre pode ser pior.",
+            "Tristêêza não tem fim... Feli...cidade... sim...",
+            "Não fique preso às derrotas do seu passado! Você ainda vai ser derrotado muitas vezes no futuro também :)",
+            "Tudo sempre passa. Nem que seja que nem um trator por cima de você.",
+            "Trabalhe com o que você ama e você nunca mais vai amar nada na sua vida.",
+            "Pare de reclamar! Aceite seu fracasso.",
+            "Nada é tão ruim que não possa piorar."
         )
 
         val fraseAleatoria = listaDeFrases.random()
@@ -36,5 +44,14 @@ class MainActivity : AppCompatActivity() {
             val fraseAleatoria = listaDeFrases.random()
             txtMainFrase.text = fraseAleatoria
         }
+
+        switchMode.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
+        }
+
     }
 }
